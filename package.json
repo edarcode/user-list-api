@@ -8,7 +8,7 @@
     "dbseed": "sh npx prisma db seed",
     "pstudio": "sh npx prisma studio",
     "dbnew": "npm run dbrelog && npm run dbseed",
-    "start": "node build/index.js",
+    "start": "npm run tsc && node build/index.js",
     "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
