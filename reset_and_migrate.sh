@@ -11,3 +11,6 @@ npx prisma migrate dev --name init --create-only --skip-seed
 
 # Aplica todas las migraciones pendientes
 npx prisma migrate deploy
+
+# Llena la api con una data inicial
+npx prisma db seed
