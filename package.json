@@ -9,7 +9,7 @@
     "pstudio": "sh npx prisma studio",
     "dbnew": "npm run dbrelog && npm run dbseed",
     "start": "node build/index.js",
-    "build": "tsc && cp -R prisma build/ && cp reset_and_migrate.sh build/",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "prisma": {
