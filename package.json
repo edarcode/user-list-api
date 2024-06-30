@@ -2,7 +2,6 @@
   "name": "curso-tsc",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "dev": "ts-node-dev src/index.ts",
     "dbrelog": "sh reset_and_migrate.sh",
@@ -14,7 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "prisma": {
-    "seed": "ts-node-dev prisma/seed.js"
+    "seed": "ts-node-dev src/db/seedDb.ts"
   },
   "keywords": [],
   "author": "",
