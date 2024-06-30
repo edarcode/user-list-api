@@ -1,7 +1,7 @@
 import { fakerES as faker } from "@faker-js/faker";
-import { OTHER, STUDENT, TEACHER } from "../constants/roles";
-import { getRandomStr } from "../utils/getRamdonStr";
-import { connDb } from "./connDb";
+import { OTHER, STUDENT, TEACHER } from "../src/constants/roles";
+import { connDb } from "../src/db/connDb";
+import { getRandomStr } from "../src/utils/getRamdonStr";
 
 const SIZE_DATA = 30;
 const usernames = faker.helpers.uniqueArray(faker.internet.userName, SIZE_DATA);
