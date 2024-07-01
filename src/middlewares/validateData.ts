@@ -1,12 +1,12 @@
 import { ZodSchema } from "zod";
-import { Next, ReqQueryParsed, Res, TypeDataReq } from "../../types/types";
+import { Next, ReqQueryUsers, Res, TypeDataReq } from "../../types/types";
 import { BODY, QUERY } from "../constants/typeDataReq";
 
 export const validateData = (
   schema: ZodSchema,
   typeDataReq: TypeDataReq = BODY
 ) => {
-  const fn = (req: ReqQueryParsed, res: Res, next: Next) => {
+  const fn = (req: ReqQueryUsers, res: Res, next: Next) => {
     try {
       const dataParsed = schema.parse(req[typeDataReq]);
       if (typeDataReq === QUERY) {

@@ -14,11 +14,11 @@ export type UpdateUser = Partial<CreateUser>;
 
 export type OrderUserBy = "name" | "role" | "state";
 
-export interface ReqQueryParsed extends Req {
-  queryParsed?: QueryParsedGetUsers | QueryParsedGetProducts;
+export interface ReqQueryUsers extends Req {
+  queryParsed?: QueryParsedUsers;
 }
 
-export type QueryParsedGetUsers = {
+export type QueryParsedUsers = {
   page?: number;
   take?: number;
   name?: string;
@@ -26,10 +26,6 @@ export type QueryParsedGetUsers = {
   state?: boolean;
   role?: string;
   order?: OrderUserBy;
-};
-
-export type QueryParsedGetProducts = {
-  size?: number;
 };
 
 export type TypeDataReq = "body" | "query" | "params";

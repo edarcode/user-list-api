@@ -1,8 +1,8 @@
 import { Prisma } from "@prisma/client";
-import { QueryParsedGetUsers } from "../../../types/types";
+import { QueryParsedUsers } from "../../../types/types";
 import { connDb } from "../connDb";
 
-export const getUsersDb = async (queryParsed?: QueryParsedGetUsers) => {
+export const getUsersDb = async (queryParsed?: QueryParsedUsers) => {
   const {
     page = 1,
     take = 10,

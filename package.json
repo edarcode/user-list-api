@@ -7,7 +7,6 @@
     "dbrelog": "sh reset_and_migrate.sh",
     "dbseed": "sh seed.sh",
     "dbnew": "npm run dbrelog && npm run dbseed",
-    "pstudio": "sh prisma_studio.sh",
     "build": "tsc",
     "start": "node build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
