@@ -1,8 +1,8 @@
 import z from "zod";
 import { OTHER, STUDENT, TEACHER } from "../../constants/roles";
 
-// regex does not accept lowercase, does not accept accents and cannot start with numbers
-const regex = /^(?!\d)[^A-ZáéíóúüñÁÉÍÓÚÜÑ]*$/;
+// only lowercase, numbers, does not accept accents and cannot start with numbers
+const regex = /^[^\d][a-z\d]+$/;
 
 export const schemaCreateUser = z.object({
   name: z.string().min(1),
@@ -12,7 +12,7 @@ export const schemaCreateUser = z.object({
     .max(15)
     .refine((username) => regex.test(username), {
       message:
-        "does not accept lowercase, does not accept accents and cannot start with numbers",
+        "only lowercase, numbers, does not accept accents and cannot start with numbers",
     }),
   role: z.enum([STUDENT, TEACHER, OTHER]),
   state: z.boolean().optional(),
