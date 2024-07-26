@@ -19,8 +19,8 @@ const validateDataUpdateUser = [
   validateData(schemaUuid, PARAMS),
 ];
 
-usersRouter.get("/", validateData(schemaGetUsers, QUERY), getUsers);
-usersRouter.get("/:id", validateData(schemaUuid, PARAMS), getUserById);
-usersRouter.post("/", validateData(schemaCreateUser), createUser);
-usersRouter.patch("/:id", validateDataUpdateUser, updateUser);
-usersRouter.delete("/:id", validateData(schemaUuid, PARAMS), deleteUser);
+usersRouter.get("/api/", validateData(schemaGetUsers, QUERY), getUsers);
+usersRouter.get("/api/:id", validateData(schemaUuid, PARAMS), getUserById);
+usersRouter.post("/api/", validateData(schemaCreateUser), createUser);
+usersRouter.patch("/api/:id", validateDataUpdateUser, updateUser);
+usersRouter.delete("/api/:id", validateData(schemaUuid, PARAMS), deleteUser);
